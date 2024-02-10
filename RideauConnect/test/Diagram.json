@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 121.8, "left": 707.6, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp1", "top": 392, "left": 316.4, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 241.6, "left": 10, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 60, "left": 405.02, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 415.4, "left": 738.9, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 620.4, "left": 710, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp1:GND.2", "bb1:1b.j", "black", [ "v-96", "h283.24" ] ],
+    [ "pir1:GND", "bb1:1b.i", "black", [ "v0" ] ],
+    [ "ldr1:VCC", "bb1:2b.g", "red", [ "h0" ] ],
+    [ "ldr1:GND", "bb1:1b.g", "black", [ "h0" ] ],
+    [ "rtc1:SDA", "esp1:21", "blue", [ "h-268.8", "v66.9" ] ],
+    [ "rtc1:SCL", "esp1:22", "gold", [ "h-220.8", "v28.6" ] ],
+    [ "rtc1:5V", "bb1:2b.f", "red", [ "h-38.4", "v-67.6", "h67.2", "v-144" ] ],
+    [ "rtc1:GND", "bb1:1b.f", "black", [ "h0", "v-48", "h48", "v-124.8", "h-57.6" ] ],
+    [ "servo1:GND", "esp1:GND.1", "black", [ "h-480", "v-134.4" ] ],
+    [ "servo1:V+", "esp1:5V", "green", [ "h-518.4", "v-9.5" ] ],
+    [ "esp1:18", "servo1:PWM", "orange", [ "h158.44", "v153.6" ] ],
+    [ "pir1:OUT", "esp1:23", "purple", [ "v0" ] ],
+    [ "pir1:VCC", "bb1:2b.h", "red", [ "v0" ] ],
+    [ "esp1:5V", "bb1:2b.j", "red", [ "h-33.41", "v48", "h355.2", "v-297.6", "h105.6" ] ],
+    [ "esp1:34", "ldr1:AO", "green", [ "h-33.41", "v-172.8", "h48" ] ]
+  ],
+  "dependencies": {}
+}

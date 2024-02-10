@@ -1,0 +1,11 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+# Automatically added based on includes:
+RTClib
+
+PubSubClient
+Adafruit Unified Sensor
+Adafruit TSL2591 Library
+Servo
+ESP32Servo
